@@ -43,9 +43,12 @@ System.register(["lodash"], function (_export, _context) {
           this.url = instanceSettings.url;
           this.name = instanceSettings.name;
           this.severityLevels = {};
-          this.severityLevels[instanceSettings.jsonData.severity.critical.toLowerCase()] = 3;
-          this.severityLevels[instanceSettings.jsonData.severity.warning.toLowerCase()] = 2;
-          this.severityLevels[instanceSettings.jsonData.severity.info.toLowerCase()] = 1;
+          this.severityLevels[instanceSettings.jsonData.severity.critical.toLowerCase()] = 6;
+          this.severityLevels[instanceSettings.jsonData.severity.high.toLowerCase()] = 5;
+          this.severityLevels[instanceSettings.jsonData.severity.medium.toLowerCase()] = 4;
+          this.severityLevels[instanceSettings.jsonData.severity.low.toLowerCase()] = 3;
+          this.severityLevels[instanceSettings.jsonData.severity.test.toLowerCase()] = 2;
+          this.severityLevels[instanceSettings.jsonData.severity.ciaas.toLowerCase()] = 1;
           this.q = $q;
           this.backendSrv = backendSrv;
           this.templateSrv = templateSrv;
